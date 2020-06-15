@@ -5,6 +5,7 @@ int fact(int num);
 int reverse_number(int num);
 int armstrong(int num);
 int fibonacci(int num);
+int true_fibonacci(int num);
 int print_n_times(int num);
 int even_odd_count(int num);
 
@@ -106,6 +107,26 @@ int fibonacci(int num){
 
     }
 
+}
+
+int true_fibonacci(int num){
+    if(num == 0 || num == 1){
+
+        return num;
+
+    }else if(num > 1){
+
+        return true_fibonacci(num - 1) + true_fibonacci(num - 2);
+
+    }else{
+
+        int fib_neg = true_fibonacci(-num);
+        if(num % 2 == 0){
+            return fib_neg;
+        }else{
+            return -fib_neg;
+        }
+    }
 }
 
 int print_n_times(int num){
