@@ -118,10 +118,10 @@ void high(){
 
     for(i=0; i<k; i++){
         for(j=0; j<k-1; j++){
-            if(s[i].total < s[i+1].total){
-                temp = s[i];
-                s[i] = s[i+1];
-                s[i+1] = temp;
+            if(s[j].total < s[j+1].total){
+                temp = s[j];
+                s[j] = s[j+1];
+                s[j+1] = temp;
             }
         }
     }
